@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+<body>
+<div>
+    <h1>Users listing</h1>
+    <a href="FrontControllerServlet?controller=List">List</a>
+    <!--Pesquisar usuários  -->
+    <form action="FrontControllerServlet?controller=Search" method="post">
+        <fieldset>
+            <label for="name">Username</label>
+            <input name="name" id="name">
+        </fieldset>
+        <input type="submit" value="Search">
+    </form>
+    <!--Pesquisar usuários por ID  -->
+    <form action="FrontControllerServlet?controller=SearchId" method="post">
+        <fieldset>
+            <label for="id">User ID</label>
+            <input type="text" id="id" name="id">
+        </fieldset>
+        <input type="submit" value="Search by ID">
+    </form>
+    <!-- Remover usuários  -->
+    <form action="FrontControllerServlet?controller=Remove" method="post">
+        <fieldset>
+            <label for="rid">User ID</label>
+            <input type="text" id="rid" name="id">
+        </fieldset>
+        <input type="submit" value="Remove">
+    </form>
+    <!-- Atualizar usuários-->
+    <form action="FrontControllerServlet?controller=Update" method="post">
+        <fieldset>
+            <label for="uid">User Id</label>
+            <input type="text" id="uid" name="id">
+        </fieldset>
+        <fieldset>
+            <label for="uname">Name</label>
+            <input type="text" id="uname" name="name">
+        </fieldset>
+        <fieldset>
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" name="id">
+        </fieldset>
+        <fieldset>
+            <label for="login">Login</label>
+            <input type="text" id="login" name="login">
+        </fieldset>
+        <fieldset>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+        </fieldset>
+        <input type="submit" value="Update user">
+    </form>
+    <!-- Cria usuários-->
+    <form action="FrontControllerServlet?controller=New" method="post">
+
+        <fieldset>
+            <label for="nname">Name</label>
+            <input type="text" id="nname" name="name">
+        </fieldset>
+        <fieldset>
+            <label for="nsurname">Surname</label>
+            <input type="text" id="nsurname" name="id">
+        </fieldset>
+        <fieldset>
+            <label for="nlogin">Login</label>
+            <input type="text" id="nlogin" name="login">
+        </fieldset>
+        <fieldset>
+            <label for="npassword">Password</label>
+            <input type="password" name="password" id="npassword">
+        </fieldset>
+        <input type="submit" value="Create user">
+    </form>
+</div>
+</body>
+</html>
