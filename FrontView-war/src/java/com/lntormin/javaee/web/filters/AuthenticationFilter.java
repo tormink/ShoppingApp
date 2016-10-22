@@ -40,9 +40,9 @@ public class AuthenticationFilter implements Filter {
 
     /**
      *
-     * @param request The servlet request we are processing
-     * @param response The servlet response we are creating
-     * @param chain The filter chain we are processing
+     * @param servletRequest The servlet request we are processing
+     * @param servletResponse The servlet response we are creating
+     * @param filterChain The filter chain we are processing
      *
      * @exception IOException if an input/output error occurs
      * @exception ServletException if a servlet error occurs
@@ -59,7 +59,7 @@ public class AuthenticationFilter implements Filter {
 
         HttpSession session = request.getSession(false);
 
-        if (session == null && !(uri.endsWith("html") || uri.endsWith("LoginServlet"))) {
+        if (session == null && !(uri.endsWith("html") ||!uri.endsWith("css")||!uri.endsWith("js") ||!uri.endsWith("jpg") || uri.endsWith("LoginServlet"))) {
             this.context.log("Unauthorized access request.");
         } else {
             filterChain.doFilter(request, response);

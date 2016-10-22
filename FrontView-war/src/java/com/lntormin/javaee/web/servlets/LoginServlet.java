@@ -48,7 +48,7 @@ public class LoginServlet extends HttpServlet {
             Cookie userName = new Cookie("user", userRequest);
             userName.setMaxAge(30 * 60);
             response.addCookie(userName);
-            response.sendRedirect("loginsuccess.jsp");
+            response.sendRedirect("index.jsp");
         } else {
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/login.html");
             PrintWriter out = response.getWriter();

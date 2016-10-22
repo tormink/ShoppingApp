@@ -1,10 +1,11 @@
 package com.lntormin.javaee.ejb.interceptors;
 
 import javax.annotation.Resource;
-import javax.jms.ConnectionFactory;
-import javax.jms.*;
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.InvocationContext;
+import javax.jms.ConnectionFactory;
+import javax.jms.*;
+
 
 /**
  *

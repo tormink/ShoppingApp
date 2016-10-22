@@ -30,6 +30,8 @@ public class NewController extends AbstractController {
             String surname = this.getRequest().getParameter("surname");
             String userName = this.getRequest().getParameter("username");
             String password = this.getRequest().getParameter("password");
+            
+            Logger.getLogger(NewController.class.getName()).log(Level.INFO,"Surname: "+surname+"  Username: "+userName);
 
             User user = new User();
             user.setName(name);

@@ -1,0 +1,15 @@
+.page{
+    padding-left: 0;
+    background-color: #f5f5f5;
+}
+.bg-img{
+    background-image: url("../img/stock1.jpg");
+    height:100vh;
+}
+.loginform{
+    padding-top: 10%;
+}
+.btn-cstm{
+    margin-top: 15px;
+}
+

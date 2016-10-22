@@ -37,6 +37,10 @@ public class UpdateController extends AbstractController {
             user.setName(name);
             user.setSurname(surname);
             user.setUsername(username);
+            
+            userBean.updateUser(user);
+            this.setReturnPage("/displayUser.jsp");
+            this.getRequest().setAttribute("user", user);
 
         } catch (Exception ex) {
             Logger.getLogger(UpdateController.class.getName()).log(Level.SEVERE, null, ex);
