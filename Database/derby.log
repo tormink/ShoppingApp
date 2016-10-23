@@ -1,7 +1,7 @@
-Sat Oct 22 15:04:44 BRST 2016 : Apache Derby Network Server - 10.10.2.0 - (1582446) started and ready to accept connections on port 1527
+Sun Oct 23 15:43:47 BRST 2016 : Apache Derby Network Server - 10.10.2.0 - (1582446) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Sat Oct 22 15:05:23 BRST 2016:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0157-ed5a-0c60-0000572f99b3 
+Sun Oct 23 15:45:43 BRST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0157-f2a4-29fb-0000572f99b3 
 on database directory /home/lntormin/projects/javaee/EnterpriseApp/Database/meuDB with class loader sun.misc.Launcher$AppClassLoader@610455d6 
 Loaded from file:/home/lntormin/projects/javaee/derby/lib/derby.jar
 java.vendor=Oracle Corporation

@@ -8,30 +8,42 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author lntormin
  */
-
+@XmlRootElement(name="user")
+@XmlAccessorType(XmlAccessType.FIELD)
 @Entity
 @Table(name = "tb_usuario")
 public class User {
 
+    @XmlAttribute
     @Id
     @Column(name = "usuario_id")
     @SequenceGenerator(name = "userGenerator", sequenceName = "usuario_id_sequence", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "userGenerator")
     private int id;
 
+    @XmlElement
     @Column(name = "nome")
     private String name;
 
+    @XmlElement
     @Column(name = "sobrenome")
     private String surname;
 
+    @XmlElement
     @Column(name = "login")
     private String username;
 
+    @XmlElement
     @Column(name = "hash")
     private String hash;
 
