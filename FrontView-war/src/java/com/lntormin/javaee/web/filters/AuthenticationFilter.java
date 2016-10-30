@@ -59,7 +59,7 @@ public class AuthenticationFilter implements Filter {
 
         HttpSession session = request.getSession(false);
 
-        if (session == null && !(uri.endsWith("html") ||!uri.endsWith("css")||!uri.endsWith("js") ||!uri.endsWith("jpg") || uri.endsWith("LoginServlet"))) {
+        if (session == null && !(uri.endsWith("html") ||!uri.endsWith("css")||!uri.endsWith("js") ||!uri.endsWith("jpg") || uri.endsWith("LoginServlet") || uri.contains("UserManagement"))) {
             this.context.log("Unauthorized access request.");
         } else {
             filterChain.doFilter(request, response);

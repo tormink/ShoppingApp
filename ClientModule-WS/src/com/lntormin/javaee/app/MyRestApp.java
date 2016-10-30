@@ -18,8 +18,8 @@ public class MyRestApp {
             URL url = new URL(baseURL+"user/"+id);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
-            connection.setRequestProperty("Accept", "application/xml");
-            if(connection.getResponseCode()!=200){
+            connection.setRequestProperty("Accept", "application/json");
+            if(connection.getResponseCode()!=200){  
                 throw new RuntimeException("Failure : HTTP error code: "+connection.getResponseCode());
             }
             BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));

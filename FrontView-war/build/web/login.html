@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="css/front.css">
+</head>
+
+<body>
+    <main class="container-fluid page">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="bg-img"></div>
+            </div>
+            <div class="col-md-4 loginform">
+                <h1>User manager module</h1>
+                <form action="LoginServlet" method="post">
+                    <fieldset class="form-group">
+                        <label for="username">Username</label>
+                        <input class="form-control" type="text" name="login" id="username">
+                    </fieldset>
+                    <fieldset>
+                        <label for="password">Password</label>
+                        <input class="form-control" type="password" name="password" id="password">
+                    </fieldset>
+                    <button class="btn btn-default btn-cstm" type="submit">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

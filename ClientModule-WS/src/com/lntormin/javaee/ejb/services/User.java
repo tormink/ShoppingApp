@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for user complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="user">
  *   &lt;complexContent>
@@ -27,8 +27,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "user", propOrder = {
@@ -48,11 +48,11 @@ public class User {
 
     /**
      * Gets the value of the name property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getName() {
         return name;
@@ -60,11 +60,11 @@ public class User {
 
     /**
      * Sets the value of the name property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setName(String value) {
         this.name = value;
@@ -72,11 +72,11 @@ public class User {
 
     /**
      * Gets the value of the surname property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getSurname() {
         return surname;
@@ -84,11 +84,11 @@ public class User {
 
     /**
      * Sets the value of the surname property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setSurname(String value) {
         this.surname = value;
@@ -96,11 +96,11 @@ public class User {
 
     /**
      * Gets the value of the username property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getUsername() {
         return username;
@@ -108,11 +108,11 @@ public class User {
 
     /**
      * Sets the value of the username property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setUsername(String value) {
         this.username = value;
@@ -120,11 +120,11 @@ public class User {
 
     /**
      * Gets the value of the hash property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getHash() {
         return hash;
@@ -132,11 +132,11 @@ public class User {
 
     /**
      * Sets the value of the hash property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setHash(String value) {
         this.hash = value;
@@ -144,7 +144,7 @@ public class User {
 
     /**
      * Gets the value of the id property.
-     * 
+     *
      */
     public int getId() {
         return id;
@@ -152,7 +152,7 @@ public class User {
 
     /**
      * Sets the value of the id property.
-     * 
+     *
      */
     public void setId(int value) {
         this.id = value;

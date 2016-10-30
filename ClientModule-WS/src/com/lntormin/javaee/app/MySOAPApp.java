@@ -18,7 +18,6 @@ public class MySOAPApp {
         UserServiceService uss = new UserServiceService();
         UserService us = uss.getUserServicePort();
         User user = new User();
-        user.setId(10);
         user.setName("Name");
         user.setSurname("Surname");
         us.insertUser(user);
