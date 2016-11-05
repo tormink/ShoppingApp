@@ -1,6 +1,6 @@
 package com.lntormin.javaee.web.controllers.impl;
 
-import com.lntormin.javaee.ejb.beans.UserBean;
+import com.lntormin.javaee.ejb.beans.UserBeanRemote;
 import com.lntormin.javaee.ejb.entities.User;
 import com.lntormin.javaee.web.controllers.AbstractController;
 import java.util.List;
@@ -21,7 +21,7 @@ public class SearchController extends AbstractController {
 
             String name = this.getRequest().getParameter("name");
             Context context = new InitialContext();
-            UserBean userBean = (UserBean) context.lookup("java:global/EnterpriseApp/EJBModule-ejb/UserBean");
+            UserBeanRemote userBean = (UserBeanRemote) context.lookup("java:global/EnterpriseApp/EJBModule-ejb/UserBean");
 
             List<User> users = (List) userBean.searchUserByName(name);
             this.setReturnPage("/listUsers.jsp");

@@ -1,5 +1,6 @@
 package com.lntormin.javaee.ejb.entities;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,7 +23,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
 @Table(name = "tb_usuario")
-public class User {
+public class User implements Serializable{
 
     @XmlAttribute
     @Id

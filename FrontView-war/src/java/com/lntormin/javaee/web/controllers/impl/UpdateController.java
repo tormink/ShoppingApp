@@ -5,7 +5,7 @@
  */
 package com.lntormin.javaee.web.controllers.impl;
 
-import com.lntormin.javaee.ejb.beans.UserBean;
+import com.lntormin.javaee.ejb.beans.UserBeanRemote;
 import com.lntormin.javaee.ejb.entities.User;
 import com.lntormin.javaee.web.controllers.AbstractController;
 import java.util.logging.Level;
@@ -24,7 +24,7 @@ public class UpdateController extends AbstractController {
             Logger.getLogger(UpdateController.class.getName()).log(Level.INFO, null, "Update");
 
             Context context = new InitialContext();
-            UserBean userBean = (UserBean) context.lookup("java:global/EnterpriseApp/EJBModule-ejb/UserBean");
+            UserBeanRemote userBean = (UserBeanRemote) context.lookup("java:global/EnterpriseApp/EJBModule-ejb/UserBean");
 
             User user = new User();
 

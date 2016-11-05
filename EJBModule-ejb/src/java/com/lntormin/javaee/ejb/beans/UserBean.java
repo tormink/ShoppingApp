@@ -5,7 +5,6 @@ import com.lntormin.javaee.ejb.interceptors.LogInterceptor;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
-import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.interceptor.Interceptors;
 import javax.persistence.EntityManager;
@@ -25,9 +24,8 @@ import java.util.logging.Logger;
  */
 
 @Stateless
-@LocalBean
 @Interceptors(LogInterceptor.class)
-public class UserBean {
+public class UserBean implements UserBeanRemote{
 
     @PersistenceContext(unitName = "DerbyPU")
     private EntityManager em;
@@ -89,6 +87,7 @@ public class UserBean {
         return bytes;
     }
 
+    @Override
     public User createUser(User user) {
         em.persist(user);
         em.flush();
@@ -96,22 +95,26 @@ public class UserBean {
         return user;
     }
 
+    @Override
     public List<User> list() {
         Query query = em.createQuery("FROM User user");
         return query.getResultList();
     }
 
+    @Override
     public User searchUserById(final int id) {
         return em.find(User.class, id);
 
     }
 
+    @Override
     public Collection searchUserByName(final String name) {
         Query q = em.createQuery("select u from User u where u.name= :par1");
         q.setParameter("par1", name);
         return q.getResultList();
     }
 
+    @Override
     public void removeUser(final int id) {
         User user = em.find(User.class, id);
         if (user != null) {
@@ -119,6 +122,7 @@ public class UserBean {
         }
     }
 
+    @Override
     public void updateUser(User user) {
         User updateUser = em.find(User.class, user.getId());
         if (updateUser != null) {
@@ -129,6 +133,7 @@ public class UserBean {
         }
     }
 
+    @Override
     public User changePassword(String user, String password, String newPassword) {
         Query query = em.createQuery("FROM User u where u.username='" + user + "'");
         List<User> users = query.getResultList();
@@ -148,6 +153,7 @@ public class UserBean {
         return null;
     }
 
+    @Override
     public boolean authenticate(String user, String password) {
         Query query = em.createQuery("FROM User u where u.username='" + user + "'");
         List<User> users = query.getResultList();
@@ -166,6 +172,7 @@ public class UserBean {
         return false;
     }
 
+    @Override
     public String getHash(String password) {
         try {
             return generateStrongPasswordHash(password);

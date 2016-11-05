@@ -5,10 +5,15 @@
  */
 package com.lntormin.javaee.web.servlets;
 
-import com.lntormin.javaee.ejb.beans.UserBean;
+import com.lntormin.javaee.ejb.beans.UserBeanRemote;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.ejb.EJB;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
@@ -22,10 +27,9 @@ import javax.servlet.http.HttpSession;
  * @author lntormin
  */
 public class LoginServlet extends HttpServlet {
+
     private static final long SERIALVERSIONUID = 1L;
-    @EJB
-    UserBean userBean;
-    
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -37,24 +41,35 @@ public class LoginServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         String userRequest = request.getParameter("login");
         String passwordRequest = request.getParameter("password");
 
-        if (userBean.authenticate(userRequest, passwordRequest)) {
+        System.out.println("Context PATH: " + getServletContext().getContextPath());
+        Context context;
+        UserBeanRemote beanRemote = null;
+        
+        try{
+            context = new InitialContext();
+            beanRemote = (UserBeanRemote) context.lookup("java:global/EnterpriseApp/EJBModule-ejb/UserBean");
+        }catch(NamingException namingException){
+            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE,null, namingException);
+        }
+        
+        if(beanRemote.authenticate(userRequest, passwordRequest)){
             HttpSession session = request.getSession();
             session.setAttribute("user", userRequest);
-            session.setMaxInactiveInterval(30 * 60);
+            //session expires in 30 minutes
+            session.setMaxInactiveInterval(30*60);
             Cookie userName = new Cookie("user", userRequest);
-            userName.setMaxAge(30 * 60);
+            userName.setMaxAge(30*60);
             response.addCookie(userName);
-            response.sendRedirect("index.jsp");
-        } else {
+            response.sendRedirect("WebApp/restricted/index.jsp");
+        }else{
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/login.html");
             PrintWriter out = response.getWriter();
-            out.println("<font color=red>Usuario ou senha incorretos.</font>");
+            out.println("<font color='red'>User or password are incorrect.</font>");
             dispatcher.include(request, response);
-
         }
 
     }

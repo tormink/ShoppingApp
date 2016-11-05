@@ -1,6 +1,6 @@
 package com.lntormin.javaee.web.controllers.impl;
 
-import com.lntormin.javaee.ejb.beans.UserBean;
+import com.lntormin.javaee.ejb.beans.UserBeanRemote;
 import com.lntormin.javaee.ejb.entities.User;
 import com.lntormin.javaee.web.controllers.AbstractController;
 import java.util.List;
@@ -20,7 +20,7 @@ public class RemoveController extends AbstractController {
             Logger.getLogger(RemoveController.class.getName()).log(Level.INFO, null, "Remove");
 
             Context context = new InitialContext();
-            UserBean userBean = (UserBean) context.lookup("java:global/EnterpriseApp/EJBModule-ejb/UserBean");
+            UserBeanRemote userBean = (UserBeanRemote) context.lookup("java:global/EnterpriseApp/EJBModule-ejb/UserBean");
 
             String id = this.getRequest().getParameter("id");
             userBean.removeUser(Integer.parseInt(id));

@@ -1,6 +1,6 @@
 package com.lntormin.javaee.web.controllers.impl;
 
-import com.lntormin.javaee.ejb.beans.UserBean;
+import com.lntormin.javaee.ejb.beans.UserBeanRemote;
 import com.lntormin.javaee.ejb.entities.User;
 import com.lntormin.javaee.web.controllers.AbstractController;
 import java.util.logging.Level;
@@ -21,7 +21,7 @@ public class SearchIdController extends AbstractController {
             String id = this.getRequest().getParameter("id");
             Context context = new InitialContext();
 
-            UserBean userBean = (UserBean) context.lookup("java:global/EnterpriseApp/EJBModule-ejb/UserBean");
+            UserBeanRemote userBean = (UserBeanRemote) context.lookup("java:global/EnterpriseApp/EJBModule-ejb/UserBean");
             User user = userBean.searchUserById(Integer.parseInt(id));
             this.setReturnPage("/displayUser.jsp");
             this.getRequest().setAttribute("user", user);
