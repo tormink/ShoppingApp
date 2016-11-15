@@ -1,4 +1,4 @@
-var rootURL = "http://localhost:8080/FrontView-war/UserManagement/users";
+var rootURL = "http://localhost:8080/WebApp/services";
 
 var currentUser;
 
