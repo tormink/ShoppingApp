@@ -1,4 +1,4 @@
-package com.lntormin.javaee.ejb.services;
+package com.lntormin.javaee.web.rest.services;
 
 import com.lntormin.javaee.ejb.beans.PositionBeanRemote;
 import com.lntormin.javaee.ejb.beans.UserBeanRemote;

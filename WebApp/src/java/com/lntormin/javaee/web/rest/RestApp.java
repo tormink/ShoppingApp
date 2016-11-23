@@ -1,5 +1,6 @@
 package com.lntormin.javaee.web.rest;
 
+import com.lntormin.javaee.web.rest.services.ApplicationRestService;
 import com.lntormin.javaee.web.rest.services.UserRestService;
 import java.util.HashSet;
 import java.util.Set;
@@ -17,5 +18,6 @@ public class RestApp extends Application{
     public RestApp(){
         services = new HashSet<>();
         services.add(new UserRestService());
+        services.add(new ApplicationRestService());
     }
 }
