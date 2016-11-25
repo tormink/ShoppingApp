@@ -1,6 +1,6 @@
 package com.lntormin.javaee.web.rest.services;
 
-import com.lntormin.javaee.ejb.beans.UserBeanRemote;
+import com.lntormin.javaee.ejb.remote.UserBeanRemote;
 import com.lntormin.javaee.ejb.entities.User;
 import java.io.StringReader;
 import java.net.URI;
@@ -63,10 +63,9 @@ public class UserRestService {
         return user;
     }
 
-    @RolesAllowed({"administrator"})
     @Path("/newuser")
     @POST
-    @Consumes(MediaType.APPLICATION_XML)
+    @Consumes(MediaType.TEXT_XML)
     public Response insertUser(String userXML) {
         javax.naming.Context ctx = null;
         UserBeanRemote userBean = null;
@@ -92,7 +91,6 @@ public class UserRestService {
         return Response.created(URI.create("/user/" + id)).build();
     }
 
-    @RolesAllowed({"administrator"})
     @DELETE
     @Path("/{id}")
     public Response removeUserById(@PathParam("id") final int id) {

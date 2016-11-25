@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.lntormin.javaee.ejb.beans;
+package com.lntormin.javaee.ejb.remote;
 
 import com.lntormin.javaee.ejb.entities.Position;
 import java.util.List;

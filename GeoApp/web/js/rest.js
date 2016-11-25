@@ -51,7 +51,7 @@ function init() {
             popup.setPosition(evt.coordinate);
             var xmlString;
             var login = feature.get('name');
-            var urlString = 'http://localhost:8080/FrontView-war/restservices/application/positions/';
+            var urlString = 'http://localhost:8080/WebApp/services/application/positions/';
             console.log(urlString);
             urlString = urlString.concat(login);
             console.log(urlString);

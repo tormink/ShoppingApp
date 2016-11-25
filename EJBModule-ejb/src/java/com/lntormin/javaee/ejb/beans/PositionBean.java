@@ -5,6 +5,7 @@
  */
 package com.lntormin.javaee.ejb.beans;
 
+import com.lntormin.javaee.ejb.remote.PositionBeanRemote;
 import com.lntormin.javaee.ejb.entities.Position;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -17,15 +18,17 @@ import javax.persistence.Query;
  * @author lntormin
  */
 @Stateless
-public class PositionBean {
+public class PositionBean implements PositionBeanRemote{
     
     @PersistenceContext(unitName = "DerbyPU")
     private EntityManager em;
     
+    @Override
     public void save(Position p){
         em.persist(p);
     }
     
+    @Override
     public List<Position> list(String username){
         Query query = em.createQuery("FROM Position p where p.login='"+username+"'");
         

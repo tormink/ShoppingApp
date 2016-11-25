@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<collection>
+    <position>
+        <id>0</id>
+        <latitude>-23.5798865</latitude>
+        <login>Teste </login>
+        <longitude>-46.6776294</longitude>
+        <timestamp>2015-11-23 17:32:28</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.579857</latitude>
+        <login>Teste </login>
+        <longitude>-46.6775734</longitude>
+        <timestamp>2015-11-23 17:32:57</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5772102</latitude>
+        <login>Teste </login>
+        <longitude>-46.6726298</longitude>
+        <timestamp>2015-11-23 17:34:16</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5770627</latitude>
+        <login>Teste </login>
+        <longitude>-46.6715365</longitude>
+        <timestamp>2015-11-23 17:36:09</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5752886</latitude>
+        <login>Teste </login>
+        <longitude>-46.6687599</longitude>
+        <timestamp>2015-11-23 17:38:54</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.574615</latitude>
+        <login>Teste </login>
+        <longitude>-46.6678603</longitude>
+        <timestamp>2015-11-23 17:39:38</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5732846</latitude>
+        <login>Teste </login>
+        <longitude>-46.6660196</longitude>
+        <timestamp>2015-11-23 17:39:54</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.573212</latitude>
+        <login>Teste </login>
+        <longitude>-46.6658922</longitude>
+        <timestamp>2015-11-23 17:40:23</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5730788</latitude>
+        <login>Teste </login>
+        <longitude>-46.6656766</longitude>
+        <timestamp>2015-11-23 17:40:54</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5730785</latitude>
+        <login>Teste </login>
+        <longitude>-46.6656769</longitude>
+        <timestamp>2015-11-23 17:41:24</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.572864</latitude>
+        <login>Teste </login>
+        <longitude>-46.665399</longitude>
+        <timestamp>2015-11-23 17:42:00</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5727485</latitude>
+        <login>Teste </login>
+        <longitude>-46.6652629</longitude>
+        <timestamp>2015-11-23 17:42:26</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5727155</latitude>
+        <login>Teste </login>
+        <longitude>-46.6652364</longitude>
+        <timestamp>2015-11-23 17:42:57</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5721361</latitude>
+        <login>Teste </login>
+        <longitude>-46.664404</longitude>
+        <timestamp>2015-11-23 17:44:27</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5710819</latitude>
+        <login>Teste </login>
+        <longitude>-46.6629173</longitude>
+        <timestamp>2015-11-23 17:45:28</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5705679</latitude>
+        <login>Teste </login>
+        <longitude>-46.6623062</longitude>
+        <timestamp>2015-11-23 17:46:32</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5691532</latitude>
+        <login>Teste </login>
+        <longitude>-46.660941</longitude>
+        <timestamp>2015-11-23 17:48:36</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5602106</latitude>
+        <login>Teste </login>
+        <longitude>-46.6548171</longitude>
+        <timestamp>2015-11-23 17:52:58</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5596604</latitude>
+        <login>Teste </login>
+        <longitude>-46.6544514</longitude>
+        <timestamp>2015-11-23 17:53:29</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5585502</latitude>
+        <login>Teste </login>
+        <longitude>-46.6536395</longitude>
+        <timestamp>2015-11-23 17:53:55</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5578534</latitude>
+        <login>Teste </login>
+        <longitude>-46.6526204</longitude>
+        <timestamp>2015-11-23 17:54:37</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.557354</latitude>
+        <login>Teste </login>
+        <longitude>-46.6516675</longitude>
+        <timestamp>2015-11-23 17:55:30</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5573183</latitude>
+        <login>Teste </login>
+        <longitude>-46.6516412</longitude>
+        <timestamp>2015-11-23 17:56:02</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5568338</latitude>
+        <login>Teste </login>
+        <longitude>-46.6507216</longitude>
+        <timestamp>2015-11-23 17:56:33</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5567965</latitude>
+        <login>Teste </login>
+        <longitude>-46.6506603</longitude>
+        <timestamp>2015-11-23 17:57:02</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5563785</latitude>
+        <login>Teste </login>
+        <longitude>-46.6501964</longitude>
+        <timestamp>2015-11-23 17:57:54</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5559157</latitude>
+        <login>Teste </login>
+        <longitude>-46.6508917</longitude>
+        <timestamp>2015-11-23 17:59:07</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.553919</latitude>
+        <login>Teste </login>
+        <longitude>-46.6520446</longitude>
+        <timestamp>2015-11-23 17:59:35</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5530061</latitude>
+        <login>Teste </login>
+        <longitude>-46.6518435</longitude>
+        <timestamp>2015-11-23 18:00:11</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5513206</latitude>
+        <login>Teste </login>
+        <longitude>-46.6478133</longitude>
+        <timestamp>2015-11-23 18:01:07</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5510808</latitude>
+        <login>Teste </login>
+        <longitude>-46.6479144</longitude>
+        <timestamp>2015-11-23 18:01:35</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5491278</latitude>
+        <login>Teste </login>
+        <longitude>-46.6485488</longitude>
+        <timestamp>2015-11-23 18:02:09</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5489778</latitude>
+        <login>Teste </login>
+        <longitude>-46.6486811</longitude>
+        <timestamp>2015-11-23 18:02:36</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5489778</latitude>
+        <login>Teste </login>
+        <longitude>-46.6486811</longitude>
+        <timestamp>2015-11-23 18:03:01</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5485045</latitude>
+        <login>Teste </login>
+        <longitude>-46.6488457</longitude>
+        <timestamp>2015-11-23 18:03:09</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5462172</latitude>
+        <login>Teste </login>
+        <longitude>-46.6511308</longitude>
+        <timestamp>2015-11-23 18:06:10</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5452887</latitude>
+        <login>Teste </login>
+        <longitude>-46.6518692</longitude>
+        <timestamp>2015-11-23 18:07:01</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5457444</latitude>
+        <login>Teste </login>
+        <longitude>-46.6505953</longitude>
+        <timestamp>2015-11-23 18:08:40</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5457444</latitude>
+        <login>Teste </login>
+        <longitude>-46.6505953</longitude>
+        <timestamp>2015-11-23 18:08:51</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5452861</latitude>
+        <login>Teste </login>
+        <longitude>-46.6516328</longitude>
+        <timestamp>2015-11-23 18:09:27</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5453199</latitude>
+        <login>Teste </login>
+        <longitude>-46.6518995</longitude>
+        <timestamp>2015-11-23 18:09:53</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.545337</latitude>
+        <login>Teste </login>
+        <longitude>-46.6519283</longitude>
+        <timestamp>2015-11-23 18:10:27</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5453756</latitude>
+        <login>Teste </login>
+        <longitude>-46.6519626</longitude>
+        <timestamp>2015-11-23 18:11:18</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5453756</latitude>
+        <login>Teste </login>
+        <longitude>-46.6519626</longitude>
+        <timestamp>2015-11-23 18:11:19</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5454</latitude>
+        <login>Teste </login>
+        <longitude>-46.6519344</longitude>
+        <timestamp>2015-11-23 18:11:22</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.545426</latitude>
+        <login>Teste </login>
+        <longitude>-46.6518624</longitude>
+        <timestamp>2015-11-23 18:13:03</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.547111</latitude>
+        <login>Teste </login>
+        <longitude>-46.6513502</longitude>
+        <timestamp>2015-11-23 18:13:09</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5468692</latitude>
+        <login>Teste </login>
+        <longitude>-46.651382</longitude>
+        <timestamp>2015-11-23 18:13:45</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5472274</latitude>
+        <login>Teste </login>
+        <longitude>-46.6518914</longitude>
+        <timestamp>2015-11-23 18:13:49</timestamp>
+    </position>
+    <position>
+        <id>0</id>
+        <latitude>-23.5472274</latitude>
+        <login>Teste </login>
+        <longitude>-46.6518914</longitude>
+        <timestamp>2015-11-23 18:14:39</timestamp>
+    </position>
+</collection>

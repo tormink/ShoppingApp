@@ -1,5 +1,6 @@
 package com.lntormin.javaee.ejb.beans;
 
+import com.lntormin.javaee.ejb.remote.UserBeanRemote;
 import com.lntormin.javaee.ejb.entities.User;
 import com.lntormin.javaee.ejb.interceptors.LogInterceptor;
 
@@ -22,10 +23,9 @@ import java.util.logging.Logger;
 /**
  * Created by lntormin on 03/10/16.
  */
-
 @Stateless
 @Interceptors(LogInterceptor.class)
-public class UserBean implements UserBeanRemote{
+public class UserBean implements UserBeanRemote {
 
     @PersistenceContext(unitName = "DerbyPU")
     private EntityManager em;
@@ -57,7 +57,9 @@ public class UserBean implements UserBeanRemote{
         byte[] candidateHash = secretKeyFactory.generateSecret(spec).getEncoded();
         int diff = hash.length ^ candidateHash.length;
 
-        for (int i = 0; i < hash.length && i < candidateHash.length; i++) diff |= hash[i] ^ candidateHash[i];
+        for (int i = 0; i < hash.length && i < candidateHash.length; i++) {
+            diff |= hash[i] ^ candidateHash[i];
+        }
 
         return diff == 0;
     }
@@ -73,10 +75,11 @@ public class UserBean implements UserBeanRemote{
         BigInteger bi = new BigInteger(1, array);
         String hex = bi.toString(16);
         int paddingLength = (array.length * 2) - hex.length();
-        if (paddingLength > 0)
+        if (paddingLength > 0) {
             return String.format("%0" + paddingLength + "d", 0) + hex;
-        else
+        } else {
             return hex;
+        }
     }
 
     private byte[] fromHex(String hex) throws NoSuchAlgorithmException {
@@ -137,7 +140,9 @@ public class UserBean implements UserBeanRemote{
     public User changePassword(String user, String password, String newPassword) {
         Query query = em.createQuery("FROM User u where u.username='" + user + "'");
         List<User> users = query.getResultList();
-        if (users.size() != 1) return null;
+        if (users.size() != 1) {
+            return null;
+        }
 
         User u = users.get(0);
 
@@ -147,7 +152,7 @@ public class UserBean implements UserBeanRemote{
                 em.persist(u);
                 return u;
             }
-        } catch (Exception ex) {
+        } catch (NoSuchAlgorithmException | InvalidKeySpecException ex) {
             ex.printStackTrace();
         }
         return null;
@@ -166,7 +171,7 @@ public class UserBean implements UserBeanRemote{
             if (user.equals(u.getUsername()) && validatePassword(password, u.getHash())) {
                 return true;
             }
-        } catch (Exception e) {
+        } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
             e.printStackTrace();
         }
         return false;
@@ -176,12 +181,19 @@ public class UserBean implements UserBeanRemote{
     public String getHash(String password) {
         try {
             return generateStrongPasswordHash(password);
-        } catch (NoSuchAlgorithmException ex) {
-            Logger.getLogger(UserBean.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InvalidKeySpecException ex) {
+        } catch (NoSuchAlgorithmException | InvalidKeySpecException ex) {
             Logger.getLogger(UserBean.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
+    }
+
+    @Override
+    public List<User> searchUserByUsername(String username) {
+        Query q = em.createQuery("select u from User u where u.username= :par1");
+        q.setParameter("par1", username);
+        
+        List<User>list = q.getResultList();
+        return list;
     }
 
 }

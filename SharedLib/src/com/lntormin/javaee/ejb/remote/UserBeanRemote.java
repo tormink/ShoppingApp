@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.lntormin.javaee.ejb.beans;
+package com.lntormin.javaee.ejb.remote;
 
 import com.lntormin.javaee.ejb.entities.User;
 import java.util.Collection;
@@ -24,6 +24,8 @@ public interface UserBeanRemote {
     public User searchUserById(final int id);
     
     public Collection searchUserByName(final String name);
+    
+    public List<User> searchUserByUsername(final String username);
     
     public void removeUser(final int id);
     

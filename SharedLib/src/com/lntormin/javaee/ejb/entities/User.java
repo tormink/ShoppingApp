@@ -19,11 +19,11 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author lntormin
  */
-@XmlRootElement(name="user")
+@XmlRootElement(name = "user")
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
 @Table(name = "tb_usuario")
-public class User implements Serializable{
+public class User implements Serializable {
 
     @XmlAttribute
     @Id
@@ -32,31 +32,36 @@ public class User implements Serializable{
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "userGenerator")
     private int id;
 
-    @XmlElement
+    @XmlElement(name = "name")
     @Column(name = "nome")
     private String name;
 
-    @XmlElement
+    @XmlElement(name = "surname")
     @Column(name = "sobrenome")
     private String surname;
 
-    @XmlElement
+    @XmlElement(name = "username")
     @Column(name = "login")
     private String username;
 
-    @XmlElement
+    @XmlElement(name = "hash")
     @Column(name = "hash")
     private String hash;
+
+    @XmlElement(name = "icon")
+    @Column(name = "icon")
+    private String icon;
 
     public User() {
     }
 
-    public User(int id, String name, String surname, String username, String hash) {
+    public User(int id, String name, String surname, String username, String hash, String icon) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.username = username;
         this.hash = hash;
+        this.icon = icon;
     }
 
     public int getId() {
@@ -99,15 +104,22 @@ public class User implements Serializable{
         this.hash = hash;
     }
 
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
     @Override
     public String toString() {
-        String sbResult = "id = " +
-                id +
-                ", nome = " +
-                name +
-                ", sobrenome = " +
-                surname;
+        String sbResult = "id = "
+                + id
+                + ", nome = "
+                + name
+                + ", sobrenome = "
+                + surname;
         return sbResult;
     }
 }
-

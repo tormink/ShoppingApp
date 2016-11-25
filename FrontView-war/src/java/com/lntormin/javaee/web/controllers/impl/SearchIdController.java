@@ -1,6 +1,6 @@
 package com.lntormin.javaee.web.controllers.impl;
 
-import com.lntormin.javaee.ejb.beans.UserBeanRemote;
+import com.lntormin.javaee.ejb.remote.UserBeanRemote;
 import com.lntormin.javaee.ejb.entities.User;
 import com.lntormin.javaee.web.controllers.AbstractController;
 import java.util.logging.Level;

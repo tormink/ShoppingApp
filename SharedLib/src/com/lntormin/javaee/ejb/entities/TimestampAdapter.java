@@ -7,6 +7,8 @@ package com.lntormin.javaee.ejb.entities;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
@@ -14,16 +16,16 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
  * @author lntormin
  */
 public class TimestampAdapter extends XmlAdapter<String, Timestamp> {
-    
+
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    
+
     @Override
     public String marshal(Timestamp v) throws Exception {
         return dateFormat.format(v);
     }
-    
+
     @Override
-    public Timestamp unmarshal(String v) throws Exception{
+    public Timestamp unmarshal(String v) throws Exception {
         return new Timestamp(dateFormat.parse(v).getTime());
     }
 }

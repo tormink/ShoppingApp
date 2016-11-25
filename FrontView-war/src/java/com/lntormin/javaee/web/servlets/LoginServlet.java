@@ -5,7 +5,7 @@
  */
 package com.lntormin.javaee.web.servlets;
 
-import com.lntormin.javaee.ejb.beans.UserBeanRemote;
+import com.lntormin.javaee.ejb.remote.UserBeanRemote;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
